@@ -1,5 +1,6 @@
 package me.cjcrafter.damagemechanics;
 
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.attribute.Attribute;
@@ -27,6 +28,9 @@ public class DamageMechanics extends JavaPlugin implements Listener {
         reloadConfig();
 
         Bukkit.getPluginManager().registerEvents(this, this);
+
+        // https://bstats.org/plugin/bukkit/DamageMechanics/16111
+        Metrics metrics = new Metrics(this, 16111);
     }
 
     @Override
