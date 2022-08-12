@@ -1,0 +1,73 @@
+# Dictates which worlds this plugin works in. If you leave this list empty, the
+# plugin will activate in ALL worlds. If you specify a few worlds in this list,
+# the plugin will ONLY activate in THOSE worlds.
+Active_Worlds: []
+#  - world
+#  - world_nether
+#  - world_the_end
+
+# 20 is the player's default health. Use -1 to disable this feature.
+# basically, if you want your players to have 100 health automatically,
+# set this value to 100.
+Set_Player_Health_Attribute: -1
+
+# The following options are the damage multipliers. All multipliers are 1.0 by
+# default (1.0 = 100%). If you want a damage source to do double damage, use 2.0
+# (2.0 = 200%). Half is 0.5 (0.5 = 50%), and so on.
+#
+# For more information on which modifier does what, look at the following link.
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+#
+# NOTE! After a big minecraft update, new options will be added automatically, but
+# YOU will need to add them to the config file!
+Damage_Modifiers:
+  BLOCK_EXPLOSION: 1.0
+  CONTACT: 1.0
+  CRAMMING: 1.0
+  CUSTOM: 1.0
+  DRAGON_BREATH: 1.0
+  DROWNING: 1.0
+  DRYOUT: 1.0
+  ENTITY_ATTACK: 1.0
+  ENTITY_EXPLOSION: 1.0
+  ENTITY_SWEEP_ATTACK: 1.0
+  FALL: 1.0
+  FALLING_BLOCK: 1.0
+  FIRE: 1.0
+  FIRE_TICK: 1.0
+  FLY_INTO_WALL: 1.0
+  FREEZE: 1.0
+  HOT_FLOOR: 1.0
+  LAVA: 1.0
+  LIGHTNING: 1.0
+  MAGIC: 1.0
+  MELTING: 1.0
+  POISON: 1.0
+  PROJECTILE: 1.0
+  SONIC_BOOM: 1.0
+  STARVATION: 1.0
+  SUFFOCATION: 1.0
+  SUICIDE: 1.0
+  THORNS: 1.0
+  VOID: 1.0
+  WITHER: 1.0
+
+# The following options are the healing multipliers. All multipliers are 1.0 by
+# default (1.0 = 100%). If you want a healing source to heal double health, use 2.0
+# (2.0 = 200%). Half is 0.5 (0.5 = 50%), and so on.
+#
+# For more information on which modifier does what, look at the following link.
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityRegainHealthEvent.RegainReason.html
+#
+# NOTE! After a big minecraft update, new options will be added automatically, but
+# YOU will need to add them to the config file!
+Heal_Modifiers:
+  CUSTOM: 1.0
+  EATING: 1.0
+  ENDER_CRYSTAL: 1.0
+  MAGIC: 1.0
+  MAGIC_REGEN: 1.0
+  REGEN: 1.0
+  SATIATED: 1.0
+  WITHER: 1.0
+  WITHER_SPAWN: 1.0
