@@ -93,12 +93,18 @@ public class DamageMechanics extends JavaPlugin implements Listener {
 
     @EventHandler (priority = EventPriority.HIGH, ignoreCancelled = true)
     public void onDamage(EntityDamageEvent event) {
+        if (!isEnabled(event.getEntity().getWorld().getName()))
+            return;
+
         double modifier = getConfig().getDouble("Damage_Modifiers." + event.getCause(), 1.0);
         event.setDamage(event.getDamage() * modifier);
     }
 
     @EventHandler (priority = EventPriority.HIGH, ignoreCancelled = true)
     public void onHeal(EntityRegainHealthEvent event) {
+        if (!isEnabled(event.getEntity().getWorld().getName()))
+            return;
+
         double modifier = getConfig().getDouble("Heal_Modifiers." + event.getRegainReason(), 1.0);
         event.setAmount(event.getAmount() * modifier);
     }
